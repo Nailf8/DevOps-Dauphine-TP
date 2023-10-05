@@ -94,7 +94,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
       2. Modifier le port si celui choisi n'est pas `8000`
       3. Une fenètre s'ouvre, que voyez vous ?
 
-    ![image](images/Screenshot 2023-10-05 at 11.34.01.png)
+    ![image](images2/screen.png)
 
 5. A partir de la documentation, remarquez les paramètres requis pour la configuration de la base de données.
 
