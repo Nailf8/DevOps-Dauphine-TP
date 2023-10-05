@@ -68,7 +68,7 @@ Wordpress dispose d'une image Docker officielle disponible sur [DockerHub](https
       docker run -it wordpress /bin/bash
       /var/www/html
    3. Que contient le fichier `index.php` ?
-      ```
+      ![image](images/image1.png)
 
 4. Supprimez le container puis relancez en un en spécifiant un port binding (une correspondance de port).
 
