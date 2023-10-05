@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/website-tools/wordpress:0.2', '.' ]
+  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/website-tools/wordpress:0.3', '.' ]
 images:
-- 'us-central1-docker.pkg.dev/$PROJECT_ID/website-tools/wordpress:0.2'
+- 'us-central1-docker.pkg.dev/$PROJECT_ID/website-tools/wordpress:0.3'

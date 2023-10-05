@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket = ""
+    bucket = "nail-bucket"
   }
 
   required_version = ">= 1.0"
