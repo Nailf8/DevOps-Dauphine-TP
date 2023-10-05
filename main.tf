@@ -50,6 +50,10 @@ template {
    spec {
       containers {
       image = "us-central1-docker.pkg.dev/devops-tp4/website-tools/wordpress@sha256:4b78f62ba07fb7f22e7f43bef16db9a1b30e2fa9b2b837f8b638fed64a8ec640"
+
+      ports {
+            container_port = 80
+        }
       }
    }
 
