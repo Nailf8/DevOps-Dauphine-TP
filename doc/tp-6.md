@@ -77,11 +77,24 @@ Wordpress dispose d'une image Docker officielle disponible sur [DockerHub](https
    2. Avec la commande `curl`, faites une requêtes depuis votre machine hôte à votre container wordpress. Quelle est la réponse ? (il n'y a pas piège, essayez sur un port non utilisé pour constater la différence)
 
    3. Afficher les logs de votre container après avoir fait quelques requêtes, que voyez vous ?
-   4. Utilisez l'aperçu web pour afficher le résultat du navigateur qui se connecte à votre container wordpress
+   logs : 
+    WordPress not found in /var/www/html - copying now...
+Complete! WordPress has been successfully copied to /var/www/html
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Thu Oct 05 07:45:13.888414 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.56 (Debian) PHP/8.0.30 configured -- resuming normal operations
+[Thu Oct 05 07:45:13.888486 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+172.18.0.1 - - [05/Oct/2023:07:45:59 +0000] "GET / HTTP/1.1" 302 235 "-" "curl/7.74.0"
+
+      En résumé, ces logs montrent que WordPress a été copié avec succès dans le répertoire par défaut du conteneur, qu'Apache a été configuré et est en cours d'exécution, et qu'une requête HTTP a été reçue avec succès depuis la commande curl. Le code de statut 302 dans la réponse HTTP indique une redirection temporaire vers une autre URL. Vous pouvez vérifier la configuration de WordPress et d'Apache pour comprendre la redirection spécifique qui a eu lieu.
+      
+   5. Utilisez l'aperçu web pour afficher le résultat du navigateur qui se connecte à votre container wordpress
       1. Utiliser la fonction `Aperçu sur le web`
         ![web_preview](images/wordpress_preview.png)
       2. Modifier le port si celui choisi n'est pas `8000`
       3. Une fenètre s'ouvre, que voyez vous ?
+
+    ![image](images/Screenshot 2023-10-05 at 11.34.01.png)
 
 5. A partir de la documentation, remarquez les paramètres requis pour la configuration de la base de données.
 
